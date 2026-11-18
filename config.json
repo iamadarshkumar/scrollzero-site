@@ -1,4 +1,5 @@
 {
   "schemaVersion": 1,
-  "pause": {}
+  "pause": { "instagram": ["hideExplore"] },
+  "message": { "id": "qa-hosted-1", "text": "QA: hosted config test. This will be removed shortly." }
 }
