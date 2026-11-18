@@ -1,0 +1,61 @@
+:root {
+  --bg: #f5f5f7;
+  --surface: #ffffff;
+  --text: #17171c;
+  --muted: #5a5a66;
+  --border: #e4e4ea;
+  --brief: #5b4be8;
+  --on-brief: #ffffff;
+  --link: #4a3bd6;
+  color-scheme: light dark;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #0e0e12;
+    --surface: #18181f;
+    --text: #f5f5f7;
+    --muted: #a1a1aa;
+    --border: #26262f;
+    --link: #a5b4fc;
+  }
+}
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font: 16px/1.6 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+main { max-width: 720px; margin: 0 auto; padding: 32px 16px 64px; }
+header.site { display: flex; align-items: center; justify-content: space-between; gap: 12px; margin-bottom: 32px; }
+header.site a.brand { color: var(--text); font-weight: 700; font-size: 20px; letter-spacing: -0.3px; text-decoration: none; }
+nav a { color: var(--muted); text-decoration: none; margin-left: 16px; font-size: 15px; }
+nav a:hover, nav a[aria-current="page"] { color: var(--text); }
+h1 { font-size: 32px; line-height: 1.2; letter-spacing: -0.6px; margin: 0 0 8px; }
+h2 { font-size: 20px; margin: 36px 0 8px; letter-spacing: -0.2px; }
+p, li { color: var(--text); }
+.muted { color: var(--muted); }
+a { color: var(--link); }
+ul { padding-left: 22px; }
+li { margin: 6px 0; }
+.card {
+  background: var(--brief);
+  color: var(--on-brief);
+  border-radius: 20px;
+  padding: 28px 24px;
+  margin: 8px 0 28px;
+}
+.card h1, .card p { color: var(--on-brief); }
+.card p { opacity: 0.92; margin: 0; }
+.summary { background: var(--surface); border: 1px solid var(--border); border-radius: 16px; padding: 4px 20px; }
+table { width: 100%; border-collapse: collapse; font-size: 15px; }
+th, td { text-align: left; padding: 10px 8px; border-bottom: 1px solid var(--border); vertical-align: top; }
+th { color: var(--muted); font-weight: 600; }
+.table-wrap { overflow-x: auto; }
+footer { margin-top: 48px; padding-top: 16px; border-top: 1px solid var(--border); font-size: 14px; color: var(--muted); }
+footer a { color: var(--muted); }
+@media (max-width: 480px) {
+  nav a { margin-left: 12px; font-size: 14px; }
+  h1 { font-size: 28px; }
+}
